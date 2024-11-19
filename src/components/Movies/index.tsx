@@ -32,7 +32,7 @@ function Movies (){
             language: "pt-BR",
         }
     }).then((res)=>{
-        console.log(res.data.results)
+        // console.log(res.data.results)
         setMovies(res.data.results)
         setTotalPages(Math.ceil(res.data.results.length / MOVIES_PER_PAGE));
         setCurrentPage(1);
@@ -63,12 +63,9 @@ function Movies (){
 
   useEffect(() => {
     if (hasSearched) {
-      if (searchTerm === "") {
-        setMessage("Digite no campo de pesquisa para prosseguir");
-        setTimeout(() => setMessage(""), 3000); 
-      } else if (filteredMovies.length === 0) {
+      if (filteredMovies.length === 0) {
         setMessage("Nenhum resultado encontrado");
-        setTimeout(() => setMessage(""), 3000);
+        setTimeout(()=> window.location.reload(), 2000)
       } else {
         setMessage("");
       }
