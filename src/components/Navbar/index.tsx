@@ -20,7 +20,7 @@ export default function Navbar({setSearchTerm,}: {setSearchTerm: (term: string) 
     };
     return(
         <nav className="Nav">
-            <h1 className="title">Filmes</h1>
+            <h1 className="title-movie">Filmes</h1>
 
             <div className="divform" >
                 <form className="form" onSubmit={handleSearch}>

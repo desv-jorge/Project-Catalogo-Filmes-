@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 import axios from "axios"
 import MovieCards from "../MovieCards"
@@ -6,6 +7,7 @@ import "./index.scss"
 import { Movie } from "@/Types/movie";
 import { useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa";
+import { Footer } from "../Footer"
 
 const MOVIES_PER_PAGE = 4
 
@@ -106,6 +108,8 @@ function Movies (){
           Próximo
         </button>
       </div>
+
+      <Footer/>
         </>
     )
 }
